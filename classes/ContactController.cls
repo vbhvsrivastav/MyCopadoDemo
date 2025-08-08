@@ -14,6 +14,7 @@
 public with sharing class ContactController {
 	@AuraEnabled(cacheable=true)
     public static List<Contact> getContactList() {
+//Adding this comment to deply using Copado 
         return [SELECT Id, FirstName, LastName, Title, Phone, Email FROM Contact LIMIT 10];
     }
 }
